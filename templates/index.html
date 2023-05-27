@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 img">
+                    <img src="{{ url_for('static',filename='img/logo.png') }}" alt="">
+                </div>
+                <div class="col list">
+                    <ul>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">Расчет стоимости</a></li>
+                        <li><a href="">Партнеры</a></li>
+                        <li><a href="">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 info">
+                    <div class="left">
+                        <select name="" id="">
+                            <option value="">Москва</option>
+                        </select>
+                       <p> <a href="">Все города</a></p>
+                    </div>
+                  <div class="right">
+                    <p>8-985-344-76-46</p>
+                    <a href="">Заказать звонок</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Краб - система</h1>
+                    <p>Для быстровозводимых 
+                        каркасных конструкций</p>
+                    <button>Получить косультацию</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantage">
+        <div class="ad-inf">
+            <h1 class="advan">ПРЕИМУЩЕСТВА СИСТЕМЫ</h1>
+        </div>
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="img-text">
+                        <div class="left-img">
+                            <img src="{{ url_for('static',filename='img/2803699465456 (1).png') }}" alt="">
+                        </div>
+                        <div class="right-text">
+                            <h4 class="strong-info">Высокая прочность, 
+                                жёсткость и надёжность</p>
+                            <p class="simple-info">По прочности  соединение с помощью 
+                                краб-системы ничем не уступает сварке</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="img-text">
+                        <div class="left-img">
+                            <img src="{{ url_for('static',filename='img/2803702371216.png') }}" alt="">
+
+                        </div>
+                        <div class="right-text">
+                            <h4 class="strong-info">Низкая стоимость</p>
+                            <p class="simple-info dop-info">Цена конструкции относительна низка, так как:<br> 
+                                • Вам не нужно использовать сварочный аппарат;<br>
+                                • работу Вы можете сделать своими руками</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="img-text">
+                        <div class="left-img">
+                            <img src="{{ url_for('static',filename='img/2803702036784.png') }}" alt="">
+
+                        </div>
+                        <div class="right-text">
+                            <h4 class="strong-info">Возможность многоразового 
+                                использования</p>
+                            <p class="simple-info">Система соединения позволяет перестроить 
+                                конструкцию – уменьшить, увеличить размеры</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="img-text">
+                        <div class="left-img">
+                            <img src="{{ url_for('static',filename='img/2803703614912.png') }}" alt="">
+
+                        </div>
+                        <div class="right-text">
+                            <h4 class="strong-info">Простота монтажа</p>
+                            <p class="simple-info">Для выполнения работ Вам не требуется 
+                                специальных знаний, Краб-система 
+                                закрепляется при помощи болтов и гаек </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="always">
+        <h2>Всегда в наличии</h2>
+        <div class="container al-wr">
+            <div class="row">
+                <div class="col">
+                    <div class="wrapper">
+                        <div class="images_1"></div>
+                        <div><p class = "name-tovar">Т-образная краб-система 20х20</p></div>
+                        <div class = 'block-rub'>
+                            <p class = 'rub'>20 руб/комп</p>
+                            <input type="text" value="0"><label for="">комп.</label>
+                        </div>
+                        <button>Заказать</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrapper">
+                        <div class="images_2"></div>
+                        <div><p class = "name-tovar">X-образная краб-система 20х20</p></div>
+                        <div class = 'block-rub'>
+                            <p class = 'rub'>20 руб/комп</p>
+                            <input type="text" value="0"><label for="">комп.</label>
+                        </div>
+                        <button>Заказать</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrapper">
+                        <div class="images_3"></div>
+                        <div><p class = "name-tovar">T-образная краб-система 25х25</p></div>
+                        <div class = 'block-rub'>
+                            <p class = 'rub'>25руб/комп</p>
+                            <input type="text" value="0"><label for="">комп.</label>
+                        </div>
+                        <button>Заказать</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrapper">
+                        <div class="images_4"></div>
+                        <div><p class = "name-tovar">X-образная краб-система 25х25</p></div>
+                        <div class = 'block-rub'>
+                            <p class = 'rub'>25руб/комп</p>
+                            <input type="text" value="0"><label for="">комп.</label>
+                        </div>
+                        <div></div>
+                        <button>Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me">
+        <h2>ПОЧЕМУ МЫ?</h2>
+        <div class="container why">
+            <div class="row ">
+                <div class="col">
+                    <img src="{{ url_for('static',filename ='img/house.png') }}" alt="">
+                    <h4>Собственное 
+                        производство</h4>
+                    <p>Мы изготавливаем элементы краб-системы на собственном производстве в Вологде, уделяя особое внимание качеству.</p>
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static',filename ='img/truck.png') }}" alt="">
+                    <h4>Доставка 
+                        по всей России</h4>
+                    <p>Мы осуществляем 
+                        доставку нашей продукции 
+                        по всей России. </p>
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static',filename ='img/rub.png') }}" alt="">
+                    <h4>Доступные 
+                        цены</h4>
+                    <p>Так как мы являемся производителем, мы 
+                        предлагаем нашу продукцию 
+                        без лишних наценок.</p>
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static',filename ='img/like.png') }}" alt="">
+                    <h4>Гарантия 
+                        качества</h4>
+                    <p>Мы уделяем особое внимание качеству нашей продукции и дорожим нашими клиентами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="creating">
+        <h2>наше производство</h2>
+        <div>
+            <video src="{{ url_for('static',filename = 'video/Теплицы из поликарбоната. Производство. ЗАВОД ГОТОВЫХ ТЕПЛИЦ.mp4') }}" class="object-fit-contain" autoplay controls></video>
+
+        </div>
+    </section>
+
+    <section class="forms">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-7"></div>
+                <div class="col">
+                    <div class="main-form">
+                        <div class="wrapper-form">
+                            <h2>ОСТАВИТЬ ЗАВЯВКУ</h2>
+                            <p>НА РАСЧЕТ СТОИМОСТИ</p>
+                            <form action="">
+                                <img src="{{ url_for('static', filename = 'img/phone.png')}}" alt="">
+                                <input class="inp" type="tel" placeholder="Номер телефона"><br>
+                                <img src="{{ url_for('static', filename = 'img/email.png')}}" alt="">
+                                <input class="inp" type="email" placeholder="E-mail"><br>
+                                <button>Заказать расчёт цены</button><br>
+                                <input type="checkbox"><label for="">Соглашаюсь с <a>условиями передачи данных</a></label>
+                            </form>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <h2>наши партнеры</h2>
+        <div class="container">
+            <div class="row part">
+                <div class="col-4"><img src="{{ url_for('static', filename = 'img/15efa96f4377a473c718553f02721b59 1.png')}}" alt=""></div>
+                <div class="col-4"><img src="{{ url_for('static', filename = 'img/Лого_старый шрифт 1.png')}}" alt=""></div>
+                <div class="col-4"><img src="{{ url_for('static', filename = 'img/logo_gf1 1.png')}}" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <h2>отзывы наших клиентов</h2>
+        <div class="container">
+            <div class="row rev">
+                <div class="col">
+                    <div>
+                        <img src="{{ url_for('static',filename='img/Ellipse 1.png') }}" alt="">
+                        <h4>Михаил Викторович</h4>
+                        <p> Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img src="{{ url_for('static',filename='img/Ellipse 1.png') }}" alt="">
+                        <h4>Михаил Викторович</h4>
+                        <p> Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img src="{{ url_for('static',filename='img/Ellipse 1 (1).png') }}" alt="">
+                        <h4>Андрей Олегович</h4>
+                        <p>Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cart">
+        <h2>мы на карте</h2>
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.ru/maps/geo/moskva/53166393/?ll=38.675395%2C55.469753&utm_medium=mapframe&utm_source=maps&z=9.34" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=38.675395%2C55.469753&mode=poi&poi%5Bpoint%5D=37.617627%2C55.755829&poi%5Buri%5D=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE2NjM5MxIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg14eBZCFfUFX0I%2C&z=9.34" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ url_for('static',filename='img/logo.png') }}" alt="">
+                </div>
+                <div class="col phone"><p>Москва, ул. Лениниа, д. 25</p></div>
+                <div class="col"><p class="number">8-985-344-76-46</p></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

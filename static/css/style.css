@@ -1,0 +1,712 @@
+.list{
+padding-top: 44px;
+}
+.info{
+    padding-top: 44px;
+}
+.img{
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+.list ul{
+    display: flex;
+}
+.list ul li{
+list-style-type: none;
+margin-right: 44px;
+}
+
+.list ul li a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    /* black as my soul */
+
+    color: #000000;
+
+}
+.left{
+    display: block;
+}
+
+.left select {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    margin-right: 41px;
+    /* black as my soul */
+    margin-bottom: 3px;
+    color: #000000;
+    border: none;
+
+}
+
+.left p a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    
+    /* Herbal Green */
+    
+    color: #319F01;
+    
+}
+
+.right  a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    
+    /* Herbal Green */
+    
+    color: #319F01;
+    
+}
+.right p{
+    max-height: 24px;
+    margin-bottom: 3px;
+}
+.info{
+    display: flex;
+    margin-top: 44px;
+}
+
+/*Section main */
+
+.main{
+    background:  url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main h1{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 98px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    /* black as my soul */
+
+    color: #000000;
+
+    margin-top: 133px;
+}
+.main p{
+        /* headers/h3 */
+    max-width: 395px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    /* or 125% */
+    margin-bottom: 56px;
+    letter-spacing: 0.02em;
+
+    /* black as my soul */
+
+    color: #000000;
+
+}
+
+.main button{
+    margin-bottom: 150px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+
+    /* white marshmallow */
+
+    color: #FFFFFF;
+
+    border: none;
+    /* Inside auto layout */
+    padding: 18px 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: #319F01;
+    border-radius: 3px;
+}
+.advan{
+    justify-content: center;
+    margin-top: 82px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+
+    /* black as my soul */
+
+    color: #000000;
+}
+.advan .ad-inf{
+    background-color: red;
+    justify-content: center;
+}
+.left-img{
+    margin-right: 24px;
+}
+
+.strong-info{
+    max-width: 324px;
+    /* headers/h4 */
+    margin-bottom: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+
+    /* black as my soul */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.simple-info{
+    max-width: 374px;
+    font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.02em;
+
+/* black as my soul */
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.img-text{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 56px;
+}
+.dop-info{
+    max-width: 455px;
+}
+
+/*всегда в наличии*/
+
+.images_1{
+
+    min-width: 302px;
+    min-height: 194px;
+    background: url('../img/T-crab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.images_2{
+
+    min-width: 302px;
+    min-height: 194px;
+    background: url('../img/X-crab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.images_3{
+
+    min-width: 302px;
+    min-height: 194px;
+    background: url('../img/T-crab2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.images_4{
+
+    min-width: 302px;
+    min-height: 194px;
+    background: url('../img/X-crab2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    background-color: #FFFFFF;
+}
+.always{
+    background: #F2EFED;
+}
+.always h2{
+    padding-top: 72px;
+    padding-bottom: 77px;
+    text-align: center;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 54px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+.name-tovar{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    padding: 0px 18px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    /* black as my soul */
+
+    color: #000000;
+}
+.wrapper .rub{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* black as my soul */
+
+    color: #000000;
+
+}
+.wrapper .block-rub{
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper input{
+    max-width: 40px;
+    max-height: 20px;
+    position: relative;
+    right: -30px;
+    
+}
+.wrapper button{
+    background: #FFFFFF;
+    box-shadow: 0px 5.10782px 11.4926px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    margin-top: 18px;
+    border: 1px solid #000000;
+    padding: 4px 8px;
+    /* black as my soul */
+    color: #000000;
+
+    position: relative;
+    left: 60%;
+    /* Inside auto layout */
+    margin-bottom: 18px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.al-wr{
+    padding-bottom: 65px;
+}
+
+/* WHY ME */
+
+.why-me h2{
+    padding-top: 88px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+    /* black as my soul */
+    
+    color: #000000;
+    
+}
+
+.why{
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+.why img{
+    margin-bottom: 24px;
+}
+.why h4{
+    margin-bottom: 8px;
+}
+
+.creating{
+    background: url('../img/background_crab.png');
+}
+
+.creating h2{
+    margin-bottom: 73px;
+    padding-top: 72px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    /* black as my soul */
+
+    color: #000000;
+
+}
+.creating div{
+    text-align: center;
+}
+
+.creating video{
+    margin-bottom: 80px;
+}
+
+.forms{
+    background: url('../img/background2_.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.forms .container .row .col .main-form{
+    justify-content: end;
+}
+.forms form{
+    
+    display: block;
+}
+.main-form{
+    margin-top: 132px;
+    margin-bottom: 134px;
+    justify-content: end;
+}
+
+.wrapper-form{
+    max-width: 452px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.wrapper-form h2{
+    padding-top: 42px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-bottom: 11px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    color: #2E363E;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.wrapper-form p{
+    font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #2E363E;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.wrapper-form input{
+    margin-bottom: 10px;
+    border: 1px solid #7A7A7A;
+border-radius: 5px;
+padding-left:  32px;
+padding-top: 32px;
+}
+.wrapper-form button{
+    min-width: 340px;
+    margin-left: 18px;
+    margin-bottom: 20.5px;
+    margin-top: 10px;
+    /* Herbal Green */
+border: none;
+background: #319F01;
+border-radius: 5px;
+/* btn/green */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+
+/* white marshmallow */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+padding: 18px 53px;
+}
+
+.main-form  label{
+    margin-left: 8px;
+}
+.main-form .inp{
+    padding-bottom: 27px;
+    min-width: 340px;
+}
+.main-form img{
+    position: relative;
+    left: 30px;
+}
+
+.partners h2{
+    padding-top: 80px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 54px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+margin-bottom: 91px;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+
+.partners img{
+    margin-right: 75px;
+
+}
+.part{
+    margin-bottom: 84px;
+}
+
+
+.reviews h4{
+    /* headers/h4 */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.02em;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+.reviews{
+    background: url(../img/background_crab.png);
+}
+.reviews h2{
+    margin-bottom: 96px;
+    /* headers/h2 */
+padding-top: 83px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 54px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+.reviews p{
+    /* body/18 */
+padding:  0px 32px;
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.02em;
+
+/* black as my soul */
+
+color: #000000;
+text-align: left;
+margin-top: 31px;
+}
+.reviews .col div{
+    background: #FFFFFF;
+border: 1px solid #CECECE;
+border-radius: 10px;
+    text-align: center;
+}
+.reviews .col div img{
+    padding-top: 24px;
+    margin-bottom: 24px;
+}
+.rev{
+    padding-bottom: 60px;
+}
+
+.cart h2{
+    padding-top: 72px;
+    margin-bottom: 78px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 54px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+footer p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+/* black as my soul */
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+footer .phone p::before{
+    content: url('../img/map-marker.svg');
+    margin-right: 3.5px;
+    background-repeat: no-repeat;
+
+}
+footer .phone p{
+    margin-top: 77px;
+}
+footer img{
+    padding-top: 61px;
+}
+footer .number{
+    margin-top: 77px;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+/* black as my soul */
+
+color: #000000;
+
+}
+
+
+footer .number::before{
+    margin-right: 3.5px;
+
+    content: url('../img/phone.png');
+}
