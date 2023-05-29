@@ -1,14 +1,17 @@
-from flask import Flask,render_template,request,session
+from flask import Flask,render_template,request,session,make_response,abort
 from flask_sqlalchemy import SQLAlchemy
+import os
+from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///crab-base.db'
 db = SQLAlchemy(app)
+app.config['UPLOAD_FOLDER'] = 'media'  # Замените 'путь/к/каталогу' на реальный путь к каталогу
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Float, nullable=False)
-    photo = db.Column(db.String(200), nullable=False)
+    photo = db.Column(db.LargeBinary, nullable=False)  # Используем BLOB для хранения фотографий
     quantity = db.Column(db.Integer, nullable=False)
     is_active = db.Column(db.Boolean, default=True)
 
@@ -27,6 +30,26 @@ class Review(db.Model):
     is_active = db.Column(db.Boolean, default=True)
 
 
+@app.route('/get_photo/<int:review_id>')
+def get_photo(review_id):
+    review = Review.query.get(review_id)
+    if review is None or review.photo is None:
+        abort(404)  # Если отзыв или изображение не найдены, возвращаем ошибку 404
+    response = make_response(review.photo)
+    response.headers.set('Content-Type', 'image/jpeg')  # Установка типа контента в соответствии с форматом изображения
+    return response
+
+@app.route('/get_photo_product/<int:product_id>')
+def get_photo_product(product_id):
+    product = Product.query.get(product_id)
+    if product is None or product.photo is None:
+        abort(404)  # Если отзыв или изображение не найдены, возвращаем ошибку 404
+    response = make_response(product.photo)
+    response.headers.set('Content-Type', 'image/jpeg')  # Установка типа контента в соответствии с форматом изображения
+    return response
+
+
+
 @app.route('/admin',methods = ['POST','GET'])
 def admiin():
    if request.method =='POST':
@@ -42,8 +65,30 @@ def admiin():
 
 @app.route('/product',methods = ['GET','POST'])
 def product():
-  
-    return render_template('add_product.html',dct)
+    if request.method == 'POST':
+        name = request.form.get('review-name')
+        price = float(request.form.get('review-price'))
+        photo = request.files['review-photo']
+        quantity = int(request.form.get('review-quantity'))
+        is_active = bool(request.form.get('review-active'))
+
+        # Сохранение фотографии на диск
+        filename = secure_filename(photo.filename)
+        photo.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+        # Читаем байтовые данные фотографии
+        with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'rb') as f:
+            photo_data = f.read()
+
+        # Создание объекта Product и сохранение данных в базу данных
+        product = Product(name=name, price=price, photo=photo_data, quantity=quantity, is_active=is_active)
+        db.session.add(product)
+        db.session.commit()
+
+        return 'Товар успешно добавлен'
+    
+    return render_template('add_product.html')
+    
 
 @app.route('/city',methods = ['GET','POST'])
 def city():
@@ -62,16 +107,25 @@ def city():
     
     return render_template('add_city.html')
 
-@app.route('/review',methods = ['GET','POST'])
+@app.route('/review', methods=['GET', 'POST'])
 def review():
     if request.method == 'POST':
         author_name = request.form.get('review-author')
         text = request.form.get('review-text')
-        photo = request.files['review-photo'].read()  # Читаем фотографию как бинарные данные
-        is_active = True if request.form.get('review-active') else False
+        photo = request.files['review-photo']  # Получаем объект FileStorage
 
-        # Сохранение данных в модель Review
-        review = Review(author_name=author_name, text=text, photo=photo.filename, is_active=is_active)
+        # Сохраняем фотографию на диск
+        filename = secure_filename(photo.filename)
+        photo.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+        is_active = bool(request.form.get('review-active'))
+
+        # Читаем байтовые данные фотографии
+        with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'rb') as f:
+            photo_data = f.read()
+
+        # Сохраняем данные в модель Review
+        review = Review(author_name=author_name, text=text, photo=photo_data, is_active=is_active)
         db.session.add(review)
         db.session.commit()
 
@@ -82,7 +136,8 @@ def review():
 def index():
     cities = City.query.all()
     reviews = Review.query.all()
-    return render_template('index.html',cities=cities,reviews=reviews)
+    products = Product.query.all()
+    return render_template('index.html',cities=cities,reviews=reviews,products=products)
 
 if __name__ == '__main__':
     with app.app_context():

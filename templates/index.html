@@ -127,51 +127,19 @@
         <h2>Всегда в наличии</h2>
         <div class="container al-wr">
             <div class="row">
+                {% for product in products %}
                 <div class="col">
-                    <div class="wrapper">
-                        <div class="images_1"></div>
-                        <div><p class = "name-tovar">Т-образная краб-система 20х20</p></div>
+                    <div class="wrapper"> 
+                        <div class="images_1"><img src="{{ url_for('get_photo_product', product_id=product.id) }}" alt="Product Photo"></div>
+                        <div><p class = "name-tovar">{{product.name}}</p></div>
                         <div class = 'block-rub'>
-                            <p class = 'rub'>20 руб/комп</p>
+                            <p class = 'rub'>{{product.price}}руб/комп</p>
                             <input type="text" value="0"><label for="">комп.</label>
                         </div>
                         <button>Заказать</button>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="wrapper">
-                        <div class="images_2"></div>
-                        <div><p class = "name-tovar">X-образная краб-система 20х20</p></div>
-                        <div class = 'block-rub'>
-                            <p class = 'rub'>20 руб/комп</p>
-                            <input type="text" value="0"><label for="">комп.</label>
-                        </div>
-                        <button>Заказать</button>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="wrapper">
-                        <div class="images_3"></div>
-                        <div><p class = "name-tovar">T-образная краб-система 25х25</p></div>
-                        <div class = 'block-rub'>
-                            <p class = 'rub'>25руб/комп</p>
-                            <input type="text" value="0"><label for="">комп.</label>
-                        </div>
-                        <button>Заказать</button>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="wrapper">
-                        <div class="images_4"></div>
-                        <div><p class = "name-tovar">X-образная краб-система 25х25</p></div>
-                        <div class = 'block-rub'>
-                            <p class = 'rub'>25руб/комп</p>
-                            <input type="text" value="0"><label for="">комп.</label>
-                        </div>
-                        <div></div>
-                        <button>Заказать</button>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

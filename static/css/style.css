@@ -248,36 +248,14 @@ flex-grow: 0;
 
 .images_1{
 
-    min-width: 302px;
+    max-width: 306px;
     min-height: 194px;
-    background: url('../img/T-crab.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.images_2{
 
-    min-width: 302px;
-    min-height: 194px;
-    background: url('../img/X-crab.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-.images_3{
+.images_1 img{
+    width: 100%;
+}
 
-    min-width: 302px;
-    min-height: 194px;
-    background: url('../img/T-crab2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.images_4{
-
-    min-width: 302px;
-    min-height: 194px;
-    background: url('../img/X-crab2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .wrapper{
     background-color: #FFFFFF;
 }

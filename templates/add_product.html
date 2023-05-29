@@ -30,26 +30,26 @@
     <h1>Добавление данных</h1>
 {% block content %}
     <h2>Модель "Product"</h2>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="product-name">Name:</label>
-            <input type="text" id="product-name" name="product-name" required>
+            <label for="review-name">Name:</label>
+            <input type="text" id="review-name" name="review-name" required>
         </div>
         <div class="form-group">
-            <label for="product-price">Price:</label>
-            <input type="number" id="product-price" name="product-price" step="0.01" required>
+            <label for="review-price">Price:</label>
+            <input type="number" id="review-price" name="review-price" step="0.01" required>
         </div>
         <div class="form-group">
-            <label for="product-photo">Photo:</label>
-            <input type="text" id="product-photo" name="product-photo" required>
+            <label for="review-photo">Photo:</label>
+            <input type="file" id="review-photo" name="review-photo" required>
         </div>
         <div class="form-group">
-            <label for="product-quantity">Quantity:</label>
-            <input type="number" id="product-quantity" name="product-quantity" required>
+            <label for="review-quantity">Quantity:</label>
+            <input type="number" id="review-quantity" name="review-quantity" required>
         </div>
         <div class="form-group">
-            <label for="product-active">Is Active:</label>
-            <input type="checkbox" id="product-active" name="product-active">
+            <label for="review-active">Is Active:</label>
+            <input type="checkbox" id="review-active" name="review-active">
         </div>
         <button type="submit" class="btn">Добавить</button>
     </form>
