@@ -28,13 +28,15 @@
                 </div>
                 <div class="col-3 info">
                     <div class="left">
-                        <select name="" id="">
-                            <option value="">Москва</option>
+                        <select name="" id="city-select">
+                            {% for city in cities %}
+                            <option value="{{city.id}}" data-phone="{{city.phone}}">{{city.name}}</option>
+                            {% endfor %}
                         </select>
                        <p> <a href="">Все города</a></p>
                     </div>
                   <div class="right">
-                    <p>8-985-344-76-46</p>
+                    <p id="phone-number">8-985-344-76-46</p>
                     <a href="">Заказать звонок</a>
                   </div>
                 </div>
@@ -228,10 +230,8 @@
                             <h2>ОСТАВИТЬ ЗАВЯВКУ</h2>
                             <p>НА РАСЧЕТ СТОИМОСТИ</p>
                             <form action="">
-                                <img src="{{ url_for('static', filename = 'img/phone.png')}}" alt="">
-                                <input class="inp" type="tel" placeholder="Номер телефона"><br>
-                                <img src="{{ url_for('static', filename = 'img/email.png')}}" alt="">
-                                <input class="inp" type="email" placeholder="E-mail"><br>
+                                <input class="inp num" type="tel" placeholder="Номер телефона"><br>
+                                <input class="inp ema" type="email" placeholder="E-mail"><br>
                                 <button>Заказать расчёт цены</button><br>
                                 <input type="checkbox"><label for="">Соглашаюсь с <a>условиями передачи данных</a></label>
                             </form>
@@ -257,27 +257,18 @@
         <h2>отзывы наших клиентов</h2>
         <div class="container">
             <div class="row rev">
+                {% for review in reviews %}
+
+
+
                 <div class="col">
                     <div>
-                        <img src="{{ url_for('static',filename='img/Ellipse 1.png') }}" alt="">
-                        <h4>Михаил Викторович</h4>
-                        <p> Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
+                        <img src="{{ url_for('get_photo', review_id=review.id) }}" alt="Review Photo">
+                        <h4>{{ review.author_name }}</h1>
+                        <p>{{ review.text }}</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div>
-                        <img src="{{ url_for('static',filename='img/Ellipse 1.png') }}" alt="">
-                        <h4>Михаил Викторович</h4>
-                        <p> Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div>
-                        <img src="{{ url_for('static',filename='img/Ellipse 1 (1).png') }}" alt="">
-                        <h4>Андрей Олегович</h4>
-                        <p>Kрaб-сиcтeмa в тeчение нескoльких лeт заcлужилa выcoкую репутацию cpeди дaчникoв и пpоизводителей тeплиц и дpугих малыx дачных сoopужений. Прoстaя и быстpая сбоpка, oтcутствие свapки, оцинкованный кpепеж пoзволяют cоздaвать тeплицы, душeвые, веpcтaки, стeллaжи из крепежа за минимальнoе время.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -297,6 +288,20 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Получаем ссылку на элемент <select>
+        var selectElement = document.getElementById("city-select");
+      
+        // Добавляем обработчик события изменения значения <select>
+        selectElement.addEventListener("change", function() {
+          // Получаем выбранный вариант
+          var selectedOption = selectElement.options[selectElement.selectedIndex];
+      
+          // Обновляем номер телефона на основе выбранного варианта
+          var phoneNumberElement = document.getElementById("phone-number");
+          phoneNumberElement.textContent = selectedOption.getAttribute("data-phone");
+        });
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -150,7 +150,21 @@ margin-right: 44px;
     flex-grow: 0;
     background: #319F01;
     border-radius: 3px;
+    transition-duration: 1s;
 }
+
+.main button:hover{
+    background: #3BBB03;
+    border-radius: 3px;
+    transition-duration: 1s;
+}
+
+.main button:active{
+    background: #298601;
+    border-radius: 3px;
+}
+
+
 .advan{
     justify-content: center;
     margin-top: 82px;
@@ -357,6 +371,16 @@ color: #000000;
     padding-bottom: 65px;
 }
 
+.always .wrapper button:hover{
+    
+background: #F0F0F0;
+/* black as my soul */
+transition-duration: 0.8s ;
+
+border: 1px solid #000000;
+border-radius: 3px;
+}
+
 /* WHY ME */
 
 .why-me h2{
@@ -443,6 +467,15 @@ color: #000000;
     background-color: #FFFFFF;
     text-align: center;
     border-radius: 3px;
+}
+
+input[type='checkbox']:hover{
+    background-color: #298601;
+    color: #298601;
+}
+
+.num::before{
+    content: url('../img/phone.png');
 }
 
 .wrapper-form h2{
