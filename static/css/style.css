@@ -27,6 +27,13 @@ list-style-type: none;
 margin-right: 30px;
 }
 
+input[type = "checkbox"]:checked{
+    background-color: #319F01;
+}
+
+input[type = "checkbox"]{
+    background-color: #ccffb6;
+}
 
 .list ul li a{
     font-family: 'Montserrat';
@@ -542,6 +549,9 @@ border-radius: 5px;
 padding-left:  32px;
 padding-top: 32px;
 }
+.main-form button{
+    margin: 0 auto;
+}
 .wrapper-form button{
     width: 90%;
     margin-bottom: 20.5px;
@@ -893,7 +903,7 @@ color: #000000;
     }
  
     .creating img{
-        bottom: -250px;
+        bottom: -200px;
     }
     footer .foot-phone{
         margin-top: 15px;

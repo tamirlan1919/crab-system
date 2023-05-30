@@ -1,11 +1,21 @@
 from flask import Flask,render_template,request,session,make_response,abort
+from flask_mail import Mail,Message
 from flask_sqlalchemy import SQLAlchemy
 import os
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///crab-base.db'
 db = SQLAlchemy(app)
-app.config['UPLOAD_FOLDER'] = 'media'  # Замените 'путь/к/каталогу' на реальный путь к каталогу
+app.config['UPLOAD_FOLDER'] = 'media' 
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com' 
+app.config['MAIL_PORT'] = 465 
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''  
+
+mail = Mail(app)
+
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -132,11 +142,22 @@ def review():
         return 'Отзыв успешно сохранен'
     return render_template('add_review.html')
 
-@app.route('/')
+@app.route('/',methods = ['GET','POST'])
 def index():
     cities = City.query.all()
     reviews = Review.query.all()
     products = Product.query.all()
+    email = 'anonim@bk.ru'
+    if request.method == 'POST':
+        name = request.form['name_un']
+        phone = request.form['phone_un']
+
+        msg = Message(f'Новое сообщение от {name}',sender=email,recipients=['developer2023@bk.ru'])
+        msg.body = f'Просьба перезвонить на номер {phone}'
+        mail.send(msg)
+
+        return 'Письмо успешно отправлено'
+
     return render_template('index.html',cities=cities,reviews=reviews,products=products)
 
 if __name__ == '__main__':

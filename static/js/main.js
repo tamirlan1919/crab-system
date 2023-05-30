@@ -38,19 +38,33 @@ document.getElementById('modal-nav').style.display = 'none'
 document.getElementById('list').style.display = 'block'
 }
 
+let ema = document.querySelector('.ema')
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("openModalBtn");
-var btn2 = document.getElementById("openModalBtnn");
 
-var span = document.getElementsByClassName("close")[0];
-var form = document.getElementById("myForm");
 
-btn.onclick = function() {
+let modal = document.getElementById("myModal");
+let btn = document.getElementById("openModalBtn");
+let btn2 = document.getElementById("openModalBtnn");
+let btn3 = document.getElementById("openModalBtnnn");
+let span = document.getElementsByClassName("close")[0];
+let form = document.getElementById("myForm");
+
+function bb(){
   modal.style.display = "block";
-};
+}
+
+btn.addEventListener('click',bb)
+
+
 btn2.onclick = function(){
     modal.style.display = "block";
+
+}
+
+
+
+btn3.onclick = function(){
+  modal.style.display = "block";
 
 }
 
@@ -63,15 +77,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 };
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-  var name = form.elements["name"].value;
-  var phone = form.elements["phone"].value;
-  
-  // Здесь вы можете добавить логику для обработки отправки данных формы
-  // Например, отправка данных на сервер или выполнение других операций
-  
-  modal.style.display = "none";
-  form.reset();
-});
