@@ -5,6 +5,9 @@ display: flex;
 header img{
     max-width: 100%;
 }
+header{
+    z-index: 9999999999;
+}
 
 .info{
     padding-top: 44px;
@@ -71,14 +74,15 @@ margin-right: 30px;
     
 }
 
-.right  a{
+.right  .op{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-    
+    border: none;
+    background-color: #fff;
     
     /* Herbal Green */
     
@@ -756,6 +760,7 @@ footer .number::before{
 .menu button{
     border: none;
    background-color: #fff;
+   color: #000000;
     font-size: 48px;
 
 }
@@ -783,6 +788,10 @@ header{
 }
 
 
+#exit{
+    border: none;
+}
+
 #right-btn{
     display: none;
     font-size: 38px;
@@ -796,9 +805,7 @@ header{
         max-width: 234px;
         max-height: 294px;
     }
-    .forms form .inp{
-        
-    }
+ 
     .main-form{
         padding: 0 42.13px;
     }
@@ -810,11 +817,7 @@ header{
         max-width: 316px;
         
     }
-    .always h2{
-        
-    }
-    .al-wr{
-    }
+  
     .always .ord{
         margin: 0 auto;
     }
@@ -828,9 +831,7 @@ header{
         text-align: start;
         padding-left: 19.51px;
     }
-    .wrapper-form{
-      
-    }
+   
     
     .part img{
         margin-bottom: 49px;
@@ -1026,3 +1027,45 @@ body,html{
     }
 }
 
+.modall {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-contentt {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+  }
+  
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+ header form input, form button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+ header form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
