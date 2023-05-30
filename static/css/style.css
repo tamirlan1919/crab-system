@@ -1,5 +1,6 @@
 .list{
 padding-top: 44px;
+display: flex;
 }
 header img{
     max-width: 100%;
@@ -87,6 +88,15 @@ margin-right: 30px;
 .right p{
     max-height: 24px;
     margin-bottom: 3px;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+/* black as my soul */
+
+color: #000000;
 }
 .info{
     display: flex;
@@ -742,11 +752,15 @@ footer .number::before{
     display: none;
    
 }
+
 .menu button{
     border: none;
-    background-color: #fff;
+   background-color: #fff;
     font-size: 48px;
 
+}
+.menu button i{
+    color: black;
 }
 
 .part img{
@@ -767,6 +781,16 @@ header{
 .creating video{
     max-width: 100%;
 }
+
+
+#right-btn{
+    display: none;
+    font-size: 38px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
 @media(max-width:768px){
     .forms .form{
         max-width: 234px;
@@ -893,6 +917,10 @@ color: #000000;
 }
 
 @media(max-width:1199px){
+    #right-btn{
+        display: block;
+        
+    }
     .info{
         display: none;
     }
@@ -925,17 +953,76 @@ body,html{
     display: flex;
 }
 
+
 #phone-number::before{
     padding-right: 8px;
-    content: url('../img/phone.png');
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
+    content: url('../img/phone.svg');
 
-/* black as my soul */
-
-color: #000000;
 
 }
+
+
+.modal-nav{
+    animation: ob;
+    animation-duration: 2s;
+    transition: 3s all;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1b242f;
+    z-index: 9999999;
+    display: none;
+}
+.modal-nav a{
+    
+    text-align: center;
+    letter-spacing: 25px;
+    margin-bottom: 25px;
+    color: #04c2c9;
+    text-decoration: none;
+    font-size: 60px;
+    line-height: 60px;
+    display: block;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+#exit:hover{
+    animation: povorot;
+    animation-duration: 2s;
+}
+
+.modal-nav .inf{
+    margin-top: 10vh;
+    display: block;
+}
+
+.modal-nav a:hover{
+    color: #096d70;
+    transition: 1.5s;
+    transform: scale(1.2);
+}
+
+@keyframes ob{
+    from{
+        opacity: 0.1;
+        
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes povorot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
