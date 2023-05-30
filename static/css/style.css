@@ -1,6 +1,10 @@
 .list{
 padding-top: 44px;
 }
+header img{
+    max-width: 100%;
+}
+
 .info{
     padding-top: 44px;
 }
@@ -11,10 +15,14 @@ padding-top: 44px;
 .list ul{
     display: flex;
 }
+.revv{
+    margin-right: 0px;
+}
 .list ul li{
 list-style-type: none;
-margin-right: 44px;
+margin-right: 30px;
 }
+
 
 .list ul li a{
     font-family: 'Montserrat';
@@ -33,12 +41,13 @@ margin-right: 44px;
 }
 
 .left select {
+    max-width: 100px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
-    margin-right: 41px;
+    margin-right: 20px;
     /* black as my soul */
     margin-bottom: 3px;
     color: #000000;
@@ -89,8 +98,9 @@ margin-right: 44px;
 .main{
     background:  url('../img/banner.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    
     background-position: center;
+    object-fit: fill;
 }
 
 .main h1{
@@ -248,7 +258,7 @@ flex-grow: 0;
 
 .images_1{
 
-    max-width: 306px;
+    
     min-height: 194px;
 
 }
@@ -257,6 +267,7 @@ flex-grow: 0;
 }
 
 .wrapper{
+    max-width: 302px;
     background-color: #FFFFFF;
 }
 .always{
@@ -394,9 +405,15 @@ border-radius: 3px;
 .creating{
     background: url('../img/background_crab.png');
 }
-
+.creating img{
+    position: relative;
+    bottom: -400px;
+    background: none;
+    margin: auto auto;
+    cursor: pointer;
+    z-index: 999;
+}
 .creating h2{
-    margin-bottom: 73px;
     padding-top: 72px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -512,8 +529,7 @@ padding-left:  32px;
 padding-top: 32px;
 }
 .wrapper-form button{
-    min-width: 340px;
-    margin-left: 18px;
+    width: 90%;
     margin-bottom: 20.5px;
     margin-top: 10px;
     /* Herbal Green */
@@ -546,7 +562,7 @@ padding: 18px 53px;
 }
 .main-form .inp{
     padding-bottom: 27px;
-    min-width: 340px;
+    width: 90%;
 }
 .main-form img{
     position: relative;
@@ -637,7 +653,7 @@ color: #000000;
 text-align: left;
 margin-top: 31px;
 }
-.reviews .col div{
+.reviews .col .rev-main{
     background: #FFFFFF;
 border: 1px solid #CECECE;
 border-radius: 10px;
@@ -720,4 +736,206 @@ footer .number::before{
     margin-right: 3.5px;
 
     content: url('../img/phone.png');
+}
+
+.menu{
+    display: none;
+   
+}
+.menu button{
+    border: none;
+    background-color: #fff;
+    font-size: 48px;
+
+}
+
+.part img{
+    
+    max-width: 100%;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.main{
+    padding-top: 38px;
+}
+
+.creating video{
+    max-width: 100%;
+}
+@media(max-width:768px){
+    .forms .form{
+        max-width: 234px;
+        max-height: 294px;
+    }
+    .forms form .inp{
+        
+    }
+    .main-form{
+        padding: 0 42.13px;
+    }
+    .creating img{
+        bottom: -150px;
+    }
+
+    .always .wrapper{
+        max-width: 316px;
+        
+    }
+    .always h2{
+        
+    }
+    .al-wr{
+    }
+    .always .ord{
+        margin: 0 auto;
+    }
+    .why-me .why-div{
+        display: flex;
+    }
+    .why-me .why-div .img-why{
+        padding-left: 15px;
+    }
+    .text-why {
+        text-align: start;
+        padding-left: 19.51px;
+    }
+    .wrapper-form{
+      
+    }
+    
+    .part img{
+        margin-bottom: 49px;
+        padding: 0px 52px;
+    }
+}
+
+@media(max-width:991px){
+    .why-div{
+        margin-bottom: 21px;
+    }
+    .part img{
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 49px;
+        text-align: center;
+    }
+    .rev-main{
+        display: flex;
+    }
+    .rev-main img{
+        padding: 14px;
+    }
+    .rev-main{
+        margin-bottom: 16px;
+        font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 15px;
+
+/* black as my soul */
+
+color: #000000;
+
+    }
+    .foot-number{
+        display: none;
+    }
+    .info{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .list{
+        display: none;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        left: 80%;
+        top: 14px;
+
+    }
+    
+    .lst{
+        display: flex;
+    }
+ 
+    .creating img{
+        bottom: -250px;
+    }
+    footer .foot-phone{
+        margin-top: 15px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13.7722px;
+        line-height: 17px;
+        /* identical to box height */
+
+
+        /* black as my soul */
+
+color: #000000;
+    }
+    footer img{
+        padding-top: 10px;
+    }
+    footer .number{
+        margin-top: 0;
+    }
+}
+
+@media(max-width:1199px){
+    .info{
+        display: none;
+    }
+    .always .wrapper{
+        
+        margin: 0 auto;
+        margin-bottom: 19.73px;
+    } 
+}
+
+body,html{
+    overflow-x: hidden;
+}
+
+.part-img{
+    text-align: center;
+}
+
+#city-select::before{
+    content: '';
+    background-image:  url('../img/map-marker.svg');
+}
+
+.select-img{
+    width: 12px;
+    height: 17px;
+    background: url('../img/map-marker.svg');
+}
+.custom-select{
+    display: flex;
+}
+
+#phone-number::before{
+    padding-right: 8px;
+    content: url('../img/phone.png');
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+/* black as my soul */
+
+color: #000000;
+
 }

@@ -14,31 +14,40 @@
 <body>
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-2 img">
+            <div class="row lst">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 img">
                     <img src="{{ url_for('static',filename='img/logo.png') }}" alt="">
                 </div>
-                <div class="col list">
+                <div class="col-xl-6 col-lg-8 list">
                     <ul>
                         <li><a href="">Каталог</a></li>
                         <li><a href="">Расчет стоимости</a></li>
                         <li><a href="">Партнеры</a></li>
-                        <li><a href="">Отзывы</a></li>
+                        <li class="revv"><a href="">Отзывы</a></li>
                     </ul>
                 </div>
-                <div class="col-3 info">
+                <div class="col-xl-4 col-lg-8 info">
                     <div class="left">
-                        <select name="" id="city-select">
-                            {% for city in cities %}
-                            <option value="{{city.id}}" data-phone="{{city.phone}}">{{city.name}}</option>
-                            {% endfor %}
-                        </select>
+                        <div class="custom-select">
+                            <div class="select-img"></div>
+                            <div class="select">
+                                <select name="" id="city-select">
+                                    {% for city in cities %}
+                                    <option value="{{city.id}}" data-phone="{{city.phone}}">{{city.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+    
                        <p> <a href="">Все города</a></p>
                     </div>
                   <div class="right">
                     <p id="phone-number">8-985-344-76-46</p>
                     <a href="">Заказать звонок</a>
                   </div>
+                </div>
+                <div class="menu">
+                    <button><i class="fa-solid fa-bars"></i></button>
                 </div>
             </div>
         </div>
@@ -47,7 +56,7 @@
     <section class="main">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <h1>Краб - система</h1>
                     <p>Для быстровозводимых 
                         каркасных конструкций</p>
@@ -64,7 +73,7 @@
        
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="img-text">
                         <div class="left-img">
                             <img src="{{ url_for('static',filename='img/2803699465456 (1).png') }}" alt="">
@@ -77,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="img-text">
                         <div class="left-img">
                             <img src="{{ url_for('static',filename='img/2803702371216.png') }}" alt="">
@@ -91,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="img-text">
                         <div class="left-img">
                             <img src="{{ url_for('static',filename='img/2803702036784.png') }}" alt="">
@@ -105,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="img-text">
                         <div class="left-img">
                             <img src="{{ url_for('static',filename='img/2803703614912.png') }}" alt="">
@@ -126,9 +135,9 @@
     <section class="always">
         <h2>Всегда в наличии</h2>
         <div class="container al-wr">
-            <div class="row">
+            <div class="row ord">
                 {% for product in products %}
-                <div class="col">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="wrapper"> 
                         <div class="images_1"><img src="{{ url_for('get_photo_product', product_id=product.id) }}" alt="Product Photo"></div>
                         <div><p class = "name-tovar">{{product.name}}</p></div>
@@ -136,7 +145,10 @@
                             <p class = 'rub'>{{product.price}}руб/комп</p>
                             <input type="text" value="0"><label for="">комп.</label>
                         </div>
-                        <button>Заказать</button>
+                        <div class="order">
+                            <button>Заказать</button>
+                        </div>
+                       
                     </div>
                 </div>
                 {% endfor %}
@@ -148,33 +160,47 @@
         <h2>ПОЧЕМУ МЫ?</h2>
         <div class="container why">
             <div class="row ">
-                <div class="col">
-                    <img src="{{ url_for('static',filename ='img/house.png') }}" alt="">
-                    <h4>Собственное 
-                        производство</h4>
-                    <p>Мы изготавливаем элементы краб-системы на собственном производстве в Вологде, уделяя особое внимание качеству.</p>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 why-div">
+                    <div class="img-why"><img src="{{ url_for('static',filename ='img/house.png') }}" alt=""></div>
+                    <div class="text-why">
+                        <h4>Собственное 
+                            производство</h4>
+                        <p>Мы изготавливаем элементы краб-системы на собственном производстве в Вологде, уделяя особое внимание качеству.</p>
+                    </div>
+                    
+
                 </div>
-                <div class="col">
-                    <img src="{{ url_for('static',filename ='img/truck.png') }}" alt="">
-                    <h4>Доставка 
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 why-div">
+                    <div class="img-why"><img src="{{ url_for('static',filename ='img/truck.png') }}" alt=""></div>
+                    <div class="text-why">
+                          <h4>Доставка 
                         по всей России</h4>
                     <p>Мы осуществляем 
                         доставку нашей продукции 
-                        по всей России. </p>
+                        по всей России. </p></div>
+                    
+                  
                 </div>
-                <div class="col">
-                    <img src="{{ url_for('static',filename ='img/rub.png') }}" alt="">
-                    <h4>Доступные 
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 why-div">
+                    <div class="img-why"><img src="{{ url_for('static',filename ='img/rub.png') }}" alt=""></div>
+                    <div class="text-why">
+                        <h4>Доступные 
                         цены</h4>
                     <p>Так как мы являемся производителем, мы 
                         предлагаем нашу продукцию 
-                        без лишних наценок.</p>
+                        без лишних наценок.</p></div>
+                    
+                    
                 </div>
-                <div class="col">
-                    <img src="{{ url_for('static',filename ='img/like.png') }}" alt="">
-                    <h4>Гарантия 
-                        качества</h4>
-                    <p>Мы уделяем особое внимание качеству нашей продукции и дорожим нашими клиентами.</p>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 why-div">
+                    <div class="img-why"><img src="{{ url_for('static',filename ='img/like.png') }}" alt=""></div>
+                    <div class="text-why">
+                        <h4>Гарантия 
+                            качества</h4>
+                        <p>Мы уделяем особое внимание качеству нашей продукции и дорожим нашими клиентами.</p>
+                    </div>
+                    
+              
                 </div>
             </div>
         </div>
@@ -182,8 +208,14 @@
 
     <section class="creating">
         <h2>наше производство</h2>
-        <div>
-            <video src="{{ url_for('static',filename = 'video/Теплицы из поликарбоната. Производство. ЗАВОД ГОТОВЫХ ТЕПЛИЦ.mp4') }}" class="object-fit-contain" autoplay controls></video>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img id="img" style = "display: block;" src="{{ url_for('static',filename = 'img/play-circle.svg') }}" alt="">
+                    <video src="{{ url_for('static', filename = 'video/Теплицы из поликарбоната. Производство. ЗАВОД ГОТОВЫХ ТЕПЛИЦ.mp4') }}"  poster="{{ url_for('static', filename = 'img/Rectangle 1.png') }}" ></video>
+        
+                </div>
+            </div>
 
         </div>
     </section>
@@ -191,8 +223,8 @@
     <section class="forms">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-7"></div>
-                <div class="col">
+                <div class="col-xl-7 col-lg-7 col-md-5 col-sm-12"></div>
+                <div class="col-xl-5 col-lg-5 col-md-7 col-sm-12">
                     <div class="main-form">
                         <div class="wrapper-form">
                             <h2>ОСТАВИТЬ ЗАВЯВКУ</h2>
@@ -215,9 +247,9 @@
         <h2>наши партнеры</h2>
         <div class="container">
             <div class="row part">
-                <div class="col-4"><img src="{{ url_for('static', filename = 'img/15efa96f4377a473c718553f02721b59 1.png')}}" alt=""></div>
-                <div class="col-4"><img src="{{ url_for('static', filename = 'img/Лого_старый шрифт 1.png')}}" alt=""></div>
-                <div class="col-4"><img src="{{ url_for('static', filename = 'img/logo_gf1 1.png')}}" alt=""></div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 part-img"><img src="{{ url_for('static', filename = 'img/15efa96f4377a473c718553f02721b59 1.png')}}" alt=""></div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 part-img"><img src="{{ url_for('static', filename = 'img/Лого_старый шрифт 1.png')}}" alt=""></div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 part-img"><img src="{{ url_for('static', filename = 'img/logo_gf1 1.png')}}" alt=""></div>
             </div>
         </div>
     </section>
@@ -229,11 +261,14 @@
 
 
 
-                <div class="col">
-                    <div>
-                        <img src="{{ url_for('get_photo', review_id=review.id) }}" alt="Review Photo">
-                        <h4>{{ review.author_name }}</h1>
-                        <p>{{ review.text }}</p>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col">
+                    <div class="rev-main">
+                        <div class="rev-photo">
+                            <img src="{{ url_for('get_photo', review_id=review.id) }}" alt="Review Photo">
+                        </div>
+                        <div class="rev-text"> <h4>{{ review.author_name }}</h1>
+                            <p>{{ review.text }}</p></div>
+                       
                     </div>
                 </div>
                 {% endfor %}
@@ -251,25 +286,23 @@
                 <div class="col">
                     <img src="{{ url_for('static',filename='img/logo.png') }}" alt="">
                 </div>
-                <div class="col phone"><p>Москва, ул. Лениниа, д. 25</p></div>
-                <div class="col"><p class="number">8-985-344-76-46</p></div>
+                <div class="col foot-number phone"><p>Москва, ул. Лениниа, д. 25</p></div>
+                <div class="col foot-phone"><p class="number">8-985-344-76-46</p></div>
             </div>
         </div>
     </footer>
     <script>
-        // Получаем ссылку на элемент <select>
-        var selectElement = document.getElementById("city-select");
+        let selectElement = document.getElementById("city-select");
       
-        // Добавляем обработчик события изменения значения <select>
         selectElement.addEventListener("change", function() {
-          // Получаем выбранный вариант
-          var selectedOption = selectElement.options[selectElement.selectedIndex];
+          let selectedOption = selectElement.options[selectElement.selectedIndex];
       
-          // Обновляем номер телефона на основе выбранного варианта
-          var phoneNumberElement = document.getElementById("phone-number");
+          let phoneNumberElement = document.getElementById("phone-number");
           phoneNumberElement.textContent = selectedOption.getAttribute("data-phone");
         });
       </script>
+      <script src="https://kit.fontawesome.com/d2d810dfd5.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename = 'js/main.js') }}"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
